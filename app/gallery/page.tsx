@@ -19,8 +19,6 @@ const extendedGallery = [
     { type: "image", src: "/60.jpeg", caption: "Practice Session" },
     { type: "image", src: "/62.jpeg", caption: "Tournament Venue" },
     { type: "image", src: "/63.jpeg", caption: "PHOTO" },
-   { type: "image", src: "/100.jpeg", caption: "PHOTO" },
-{ type: "image", src: "/100.jpeg", caption: "PHOTO1" },
 { type: "image", src: "/101.jpeg", caption: "PHOTO2" },
 { type: "image", src: "/102.jpeg", caption: "PHOTO3" },
 { type: "image", src: "/103.jpeg", caption: "PHOTO4" },
