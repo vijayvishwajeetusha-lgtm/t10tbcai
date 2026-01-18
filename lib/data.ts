@@ -121,6 +121,7 @@ export const leadershipTeam = [
 ]
 
 export const stateSecretaries = [
+  { name: "Ball Provided By Khanna Ball", state: "", image: "/13.jpeg", phone: "+91 9415701006" },
 { name: "Uttar Pradesh", state: "T10TBCAI OF Uttar Pradesh", image: "/1.jpg", phone: "+91 9415701006" },
   { name: "Telangana", state: "T10TBCAI OF Telangana", image: "2.jpg", phone: "+91 9415701006" },
   { name: "Jharkhand", state: "T10TBCAI OF Jharkhand", image: "3.jpg", phone: "+91 9415701006" },
@@ -132,8 +133,14 @@ export const stateSecretaries = [
   { name: "Himanchal Pradesh", state: "T10TBCAI OF Himanchal Pradesh", image: "/9.jpg", phone: "+91 9415701006" },
   { name: "Assam", state: "T10TBCAI OF Assam", image: "/10.jpg", phone: "+91 9415701006" },
     { name: "Haryana", state: "T10TBCAI OF Haryana", image: "/11.jpg", phone: "+91 9415701006" },
-]
+    { name: "Andhra Pradesh", state: "T10TBCAI OF Andhra Pradesh", image: "/14.jpeg", phone: "+91 9415701006" },
+    { name: "Jammu & Kashmir", state: "T10TBCAI OF Jammu & Kashmir", image: "/15.jpeg", phone: "+91 9415701006" },
+    { name: "Maharashtra", state: "T10TBCAI OF Maharashtra", image: "/16.jpeg", phone: "+91 9415701006" },
+        { name: "Karnataka", state: "T10TBCAI OF Karnataka", image: "/1600.jpeg", phone: "+91 9415701006" },
 
+
+
+]
 export const galleryImages = [
   { src: "/cricket-match-action-shot.jpg", title: "Championship Finals 2025" },
   { src: "/cricket-team-celebration-trophy.jpg", title: "Victory Celebration" },
