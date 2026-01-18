@@ -89,9 +89,7 @@ export default function ContactPage() {
                         <h3 className="font-semibold mb-1">Phone</h3>
                         <p className="text-muted-foreground text-sm">
                           +91 94157 01006, 79052 51534
-                          <br />
-                          +91 11 2345 6789
-                        </p>
+                                                </p>
                       </div>
                     </div>
                   </CardContent>
@@ -270,7 +268,7 @@ export default function ContactPage() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="NCCA Office Location"
+            title="T10TBCAI Office Location"
           />
         </section>
       </main>

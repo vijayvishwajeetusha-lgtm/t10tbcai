@@ -21,7 +21,7 @@ export default function StateDashboardPage() {
     }
   }, [])
 
-  const totalRevenue = players.length * 1500
+  const totalRevenue = players.length * 999
 
   const playerTypeCount = {
     batsman: players.filter((p) => p.playerType === "batsman").length,

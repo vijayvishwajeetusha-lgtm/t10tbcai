@@ -39,7 +39,7 @@ export default function MembersPage() {
           <div className="absolute inset-0 flex items-center">
             <div className="container mx-auto px-4">
               <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">Association Members</h1>
-              <p className="text-xl text-primary-foreground/90">Meet the team behind NCCA</p>
+              <p className="text-xl text-primary-foreground/90">Meet the team behind T10TBCAI</p>
             </div>
           </div>
         </section>

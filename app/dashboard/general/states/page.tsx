@@ -24,7 +24,7 @@ export default function StateWisePage() {
       return {
         state,
         count: statePlayers.length,
-        revenue: statePlayers.length * 1500,
+        revenue: statePlayers.length * 999,
         secretary: stateSecretaries.find((s) => s.state === state),
       }
     })
@@ -111,7 +111,7 @@ export default function StateWisePage() {
                 <div className="bg-muted p-4 rounded-lg">
                   <p className="text-sm text-muted-foreground">Total Revenue</p>
                   <p className="text-2xl font-bold text-green-600">
-                    ₹{(filteredPlayers.length * 1500).toLocaleString()}
+                    ₹{(filteredPlayers.length * 1).toLocaleString()}
                   </p>
                 </div>
                 <div className="bg-muted p-4 rounded-lg">

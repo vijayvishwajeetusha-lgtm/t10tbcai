@@ -19,7 +19,7 @@ export default function RefundPage() {
                 considered in the following circumstances:
               </p>
               <ul className="list-disc pl-6 text-muted-foreground mb-4">
-                <li>Tournament cancellation by NCCA</li>
+                <li>Tournament cancellation by T10TBCAI</li>
                 <li>Medical emergencies (with valid documentation)</li>
                 <li>Double payment due to technical errors</li>
               </ul>

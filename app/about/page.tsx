@@ -7,7 +7,7 @@ import { Footer } from "@/components/footer"
 import { Target, Eye, Heart, Award, Users, Globe, Calendar, Trophy } from "lucide-react"
 
 const milestones = [
-  { year: "2010", title: "Foundation", description: "NCCA was established to promote cricket at grassroots level" },
+  { year: "2010", title: "Foundation", description: "T10TBCAI was established to promote cricket at grassroots level" },
   { year: "2015", title: "National Reach", description: "Expanded operations to all 28 states of India" },
   { year: "2018", title: "Digital Era", description: "Launched online registration and management systems" },
   { year: "2020", title: "10,000 Players", description: "Milestone of registering 10,000 players achieved" },
@@ -52,7 +52,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
           <div className="absolute inset-0 flex items-center">
             <div className="container mx-auto px-4">
-              <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">About NCCA</h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">About T10TBCAI</h1>
               <p className="text-xl text-primary-foreground/90 max-w-2xl">
                 Nurturing cricket talent and promoting the spirit of the game across India since 2010.
               </p>

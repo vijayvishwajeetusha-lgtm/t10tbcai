@@ -70,7 +70,7 @@ export function ReceiptModal({ isOpen, onClose, player }: ReceiptModalProps) {
           <div className="header text-center border-b-2 border-primary pb-4 mb-4">
             <div className="flex justify-center mb-2">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">NCCA</span>
+                <span className="text-primary-foreground font-bold text-lg">T10TBCAI</span>
               </div>
             </div>
             <h2 className="logo text-xl font-bold text-primary">T10 Tennis Ball Cricket Association of India</h2>
@@ -128,7 +128,7 @@ export function ReceiptModal({ isOpen, onClose, player }: ReceiptModalProps) {
           {/* Payment Info */}
           <div className="amount bg-primary text-primary-foreground p-4 rounded-lg text-center my-4">
             <p className="text-sm opacity-80">Amount Paid</p>
-            <p className="text-3xl font-bold">₹1,500</p>
+            <p className="text-3xl font-bold">₹999</p>
             <p className="text-xs opacity-80 mt-1">Payment ID: {player.paymentId}</p>
           </div>
 
@@ -139,7 +139,7 @@ export function ReceiptModal({ isOpen, onClose, player }: ReceiptModalProps) {
 
           {/* Footer */}
           <div className="footer text-center text-xs text-muted-foreground mt-4 pt-4 border-t border-border">
-            <p>Thank you for registering with NCCA!</p>
+            <p>Thank you for registering with T10TBCAI!</p>
             <p>For queries, contact: t10tennisballcricket2023@gmail.com | +91 94157 01006, 79052 51534</p>
             <p className="mt-2">This is a computer-generated receipt and does not require a signature.</p>
           </div>

@@ -68,10 +68,10 @@ export function Header() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
-              <Image src="/logo.jpg" alt="NCCA Logo" width={50} height={50} className="w-12 h-12 object-contain" />
+              <Image src="/logo.jpg" alt="T10TBCAI" width={50} height={50} className="w-12 h-12 object-contain" />
               <div className="hidden sm:block">
-                <h1 className="font-bold text-foreground text-lg leading-tight">National Cricket</h1>
-                <p className="text-muted-foreground text-xs">Championship Association</p>
+                <h1 className="font-bold text-foreground text-lg leading-tight">T10 TENNIS BALL CRICKET</h1>
+                <p className="text-muted-foreground text-xs">ASSOCIATION OF INDIA</p>
               </div>
             </Link>
 

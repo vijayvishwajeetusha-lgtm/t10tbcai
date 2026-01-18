@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Progress } from "@/components/ui/progress"
+import { Checkbox } from "@/components/ui/checkbox"
 import { User, Mail, Phone, MapPin, Calendar, CreditCard, FileText, CheckCircle, AlertCircle } from "lucide-react"
 import { indianStates } from "@/lib/data"
 import type { Player } from "@/lib/types"
@@ -53,7 +54,7 @@ interface RazorpayResponse {
   razorpay_signature?: string
 }
 
-const REGISTRATION_FEE = 1500
+const REGISTRATION_FEE = 999
 
 export default function RegisterPage() {
   const [step, setStep] = useState(1)
@@ -61,6 +62,7 @@ export default function RegisterPage() {
   const [error, setError] = useState("")
   const [showReceipt, setShowReceipt] = useState(false)
   const [registeredPlayer, setRegisteredPlayer] = useState<Player | null>(null)
+  const [acceptedTerms, setAcceptedTerms] = useState(false)
 
   const [formData, setFormData] = useState({
     name: "",
@@ -150,6 +152,11 @@ export default function RegisterPage() {
   }
 
   const handlePayment = async () => {
+    if (!acceptedTerms) {
+      setError("Please accept the terms and conditions to proceed")
+      return
+    }
+
     setIsLoading(true)
     setError("")
 
@@ -235,7 +242,9 @@ export default function RegisterPage() {
             {/* Progress Header */}
             <div className="mb-8">
               <h1 className="text-3xl font-bold text-center mb-2">Player Registration</h1>
-              <p className="text-muted-foreground text-center mb-6">Join the T10 Tennis Ball Cricket Championship 2026</p>
+              <p className="text-muted-foreground text-center mb-6">
+                Join the T10 Tennis Ball Cricket Championship 2026
+              </p>
               <Progress value={progress} className="h-2" />
               <div className="flex justify-between mt-2 text-sm text-muted-foreground">
                 <span className={step >= 1 ? "text-primary font-medium" : ""}>Personal Info</span>
@@ -498,15 +507,70 @@ export default function RegisterPage() {
 
                     <div className="bg-primary/5 border border-primary/20 rounded-lg p-6">
                       <div className="flex justify-between items-center mb-4">
-                        <span className="text-lg font-semibold">Registration Fee</span>
+                        <span className="text-lg font-semibold">Trial Fee</span>
                         <span className="text-2xl font-bold text-primary">₹{REGISTRATION_FEE}</span>
                       </div>
                       <p className="text-sm text-muted-foreground mb-4">
-                        This fee includes tournament entry, jersey, and insurance coverage.
+                        This fee includes trial participation for state team selection.
                       </p>
                       <div className="flex items-center gap-2 text-sm text-green-700 bg-green-50 p-3 rounded-lg">
                         <CheckCircle className="h-4 w-4" />
                         <span>Secure payment powered by Razorpay</span>
+                      </div>
+                    </div>
+
+                    <div className="bg-amber-50 border border-amber-200 rounded-lg p-6">
+                      <h3 className="font-semibold mb-4 text-amber-900">Terms & Conditions</h3>
+                      <ul className="space-y-3 text-sm text-amber-800">
+                        <li className="flex items-start gap-2">
+                          <span className="text-amber-600 mt-0.5">•</span>
+                          <span>All states are required to select their teams on a trial basis.</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-amber-600 mt-0.5">•</span>
+                          <span>
+                            The trial fee has been set at <strong>₹999</strong>.
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-amber-600 mt-0.5">•</span>
+                          <span>
+                            Any team that reaches the pre-quarterfinals: all players who are eliminated in the
+                            pre-quarterfinals will be given <strong>₹2,500</strong> per player.
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-amber-600 mt-0.5">•</span>
+                          <span>
+                            All players who are eliminated in the quarterfinals will be given <strong>₹3,500</strong>{" "}
+                            per player.
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-amber-600 mt-0.5">•</span>
+                          <span>
+                            Players who are eliminated in the semifinals will be given <strong>₹5,000</strong> per
+                            player.
+                          </span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-red-600 mt-0.5">•</span>
+                          <span className="text-red-700 font-medium">
+                            Once a player has completed registration, no refunds will be provided under any
+                            circumstances.
+                          </span>
+                        </li>
+                      </ul>
+
+                      <div className="flex items-center gap-3 mt-5 pt-4 border-t border-amber-200">
+                        <Checkbox
+                          id="terms"
+                          checked={acceptedTerms}
+                          onCheckedChange={(checked) => setAcceptedTerms(checked as boolean)}
+                        />
+                        <Label htmlFor="terms" className="text-sm text-amber-900 cursor-pointer">
+                          I have read and agree to the above terms and conditions *
+                        </Label>
                       </div>
                     </div>
                   </div>
@@ -528,7 +592,7 @@ export default function RegisterPage() {
                     <Button
                       type="button"
                       onClick={handlePayment}
-                      disabled={isLoading}
+                      disabled={isLoading || !acceptedTerms}
                       className="flex-1 bg-accent hover:bg-accent/90 text-accent-foreground"
                     >
                       {isLoading ? "Processing..." : `Pay ₹${REGISTRATION_FEE}`}

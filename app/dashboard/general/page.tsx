@@ -15,7 +15,7 @@ export default function GeneralDashboardPage() {
     setPlayers(getPlayers())
   }, [])
 
-  const totalRevenue = players.length * 1500
+  const totalRevenue = players.length * 999
 
   const stateWiseCount = indianStates
     .map((state) => ({

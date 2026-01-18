@@ -11,10 +11,10 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "T10 Tennis Ball Cricket Association of India | NCCA India",
+  title: "T10 Tennis Ball Cricket Association of India | T10TBCAI India",
   description:
     "Official website of T10 Tennis Ball Cricket Association of India - Register for tournaments, view gallery, and connect with cricket enthusiasts across India.",
-  keywords: "cricket, tournament, India, registration, championship, NCCA",
+  keywords: "cricket, tournament, India, registration, championship, T10TBCAI",
     generator: 'v0.app'
 }
 

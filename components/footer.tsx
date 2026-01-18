@@ -13,7 +13,7 @@ export function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <Image
                 src="/logo.jpg"
-                alt="NCCA Logo"
+                alt="T10TBCAI Logo"
                 width={48}
                 height={48}
                 className="w-12 h-12 object-contain bg-background rounded-lg p-1"
