@@ -143,12 +143,6 @@ export default function LoginPage() {
                   <div className="mt-6 p-4 bg-muted rounded-lg">
                     <p className="text-sm font-medium text-foreground mb-2">Demo Credentials:</p>
                     <div className="space-y-2 text-sm text-muted-foreground">
-                      <p>
-                        <strong>General Secretary:</strong> general@cricketindia.com / admin123
-                      </p>
-                      <p>
-                        <strong>State Secretary:</strong> maharashtra@cricketindia.com / state123
-                      </p>
                     </div>
                   </div>
 
