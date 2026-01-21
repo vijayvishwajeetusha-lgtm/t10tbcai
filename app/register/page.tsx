@@ -170,7 +170,7 @@ export default function RegisterPage() {
     const config = await getRazorpayConfig()
 
     const options: RazorpayOptions = {
-      key: "rzp_live_S2vpPVUfNSA022",
+      key: ".",
       amount: REGISTRATION_FEE * 100,
       currency: "INR",
       name: "NCCA Registration",
